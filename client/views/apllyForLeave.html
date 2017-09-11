@@ -22,12 +22,29 @@
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
-        <!--<input type="text" class="input-block-level" placeholder="Email address"><br/>-->
-        <input type="password" class="input-block-level" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+        <div class="row">
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="minDate" value="" placeholder="Start date (DD/MM/YYYY)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="maxDate" value="" placeholder="End date (DD/MM/YYYY)">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <input type="text" class="form-control" id="noOfDays" value="" placeholder="No of days">
+            </div>
+        </div>
+        <button class="btn btn-large btn-primary" type="submit">Apply</button>
+
+        <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-th"></span>
+            </div>
+        </div>
       </form>
 
     </div>
