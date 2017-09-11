@@ -8,8 +8,8 @@ Leaves.schema = new SimpleSchema({
   Emp_Email: {type: String},
   Leave_Type: {type: String},
   Reason: {type: String},
-  Start_Date: {type: Date},
-  End_Date: {type: Date},
+  Start_Date: {type: String},
+  End_Date: {type: String},
   No_Of_Days: {type: Number, defaultValue: 0},
 });
 
@@ -20,21 +20,30 @@ var leaveSeeds = [
         Emp_Name: 'Shubham Sarwade',
         Emp_Email: 'shubham.sarwade@cctech.co.in',
         Leave_Type: 'Casual',
-        Reason: {type: String},
-        Start_Date: {type: Date},
-        End_Date: {type: Date},
-        No_Of_Days: {type: Number, defaultValue: 0},
+        Reason: 'going home',
+        Start_Date: '11/09/2017',
+        End_Date: '11/09/2017',
+        No_Of_Days: 1,
     },
     {
-      Emp_Name : 'Sumant Landge',
-      Emp_Email: 'sumant.landge@cctech.co.in',
-      Image_URL: 'https://lh4.googleusercontent.com/-bWx2NucQh7k/AAAAAAAAAAI/AAAAAAAAABc/BG0lLSCUm5c/s96-c/photo.jpg'
+        Emp_Name: 'Sumant Landges',
+        Emp_Email: 'sumant.landge@cctech.co.in',
+        Leave_Type: 'Casual',
+        Reason: 'going home',
+        Start_Date: '11/09/2017',
+        End_Date: '11/09/2017',
+        No_Of_Days: 1,
     },
     {
-      Emp_Name : 'Nitin Tambe',
-      Emp_Email: 'nitin.tambe@cctech.co.in',
-      Image_URL: 'https://lh4.googleusercontent.com/-bWx2NucQh7k/AAAAAAAAAAI/AAAAAAAAABc/BG0lLSCUm5c/s96-c/photo.jpg'
-    },
+        Emp_Name: 'Nitin Tambe',
+        Emp_Email: 'nitin.tambe@cctech.co.in',
+        Leave_Type: 'Casual',
+        Reason: 'going home',
+        Start_Date: '11/09/2017',
+        End_Date: '11/09/2017',
+        No_Of_Days: 1,
+    }
+
 //   {
 //     "sku" : "your-own-crater",
 //     "name" : "Your Very Own Crater",
