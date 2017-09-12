@@ -23,7 +23,9 @@ if(Meteor.isServer) {
 
 Router.route('/leaves',{where: 'server'})
     .get(function(){
-        var response = Leaves.find(/*{'Emp_Email':"shubham.sarwade@cctech.co.in"}*/).fetch();
+        var queryparam = this.request.query;
+        console.log(queryparam);
+        var response = Leaves.find({'Emp_Email':queryparam.e}).fetch();
         this.response.setHeader('Content-Type','application/json');
         this.response.end(JSON.stringify(response));
     })

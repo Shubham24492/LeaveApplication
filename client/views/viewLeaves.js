@@ -4,11 +4,18 @@ Template.viewYourLeaves.rendered = function () {
 };
 
 Template.viewYourLeaves.onCreated(function () {
-
+    if(!( Meteor.user() && Meteor.user().services.google.email.split('@')[1].includes('cctech.co.in') == true ) )
+    {
+        return;
+    }
+    else
+    {
+        emailId = Meteor.user().services.google.email;
+    }
     Tracker.autorun(function () {
     $.ajax({
         type: "GET",
-        url: "http://localhost:3000/leaves",
+        url: "http://localhost:3000/leaves?e="+emailId,
         contentType: "application/json",
         async: false,
         success: function (result) {
@@ -22,7 +29,6 @@ Template.viewYourLeaves.onCreated(function () {
                     toTime: Data[i]["End_Date"],
                     noOfDays:Data[i]["No_Of_Days"],
                     leaveReason:Data[i]["Reason"],
-                    leaveID:Data[i]["_id"]
                 });
             }
             DBDataListReact.set(leaveDetailsList);
@@ -66,10 +72,6 @@ Template.leavedetails.helpers({
         var data = Template.currentData();
         return data.leaveReason;       
     },
-    'leaveID': function () {
-        var data = Template.currentData();
-        return data.leaveID;    
-    }
 });
 
 
