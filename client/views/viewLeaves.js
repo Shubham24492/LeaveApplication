@@ -22,6 +22,7 @@ Template.viewYourLeaves.onCreated(function () {
                     toTime: Data[i]["End_Date"],
                     noOfDays:Data[i]["No_Of_Days"],
                     leaveReason:Data[i]["Reason"],
+                    leaveID:Data[i]["_id"]
                 });
             }
             DBDataListReact.set(leaveDetailsList);
@@ -64,6 +65,10 @@ Template.leavedetails.helpers({
     'leaveReason': function () {
         var data = Template.currentData();
         return data.leaveReason;       
+    },
+    'leaveID': function () {
+        var data = Template.currentData();
+        return data.leaveID;    
     }
 });
 

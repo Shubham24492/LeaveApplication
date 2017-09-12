@@ -1,5 +1,5 @@
 <template name="viewYourLeaves">
-Hi
+<h2 class="form-group">Your leave details</h2>
 <div class="wrapper wrapper-content animated fadeInRight">
                         <div class="">
                             <table class="table table-hover" >
@@ -14,15 +14,22 @@ Hi
 
 <template name="leavedetails">
     <tr>
+        <td class="project-title">
+            <small><strong>Leave ID</strong> : {{leaveID}}</small>
+         </td>
        <td class="project-title">
            <small><strong>Leave Type</strong> : {{leaveType}}</small>
-           <br/>
+        </td>
+        <td class="project-title">
            <small><strong>From Date</strong> : {{fromTime}}</small>
-           <br/>
+        </td>
+        <td class="project-title">
            <small><strong>To Date</strong> : {{toTime}}</small>
-           <br/>
+        </td>
+        <td class="project-title">
            <small><strong>No Of Days</strong> : {{noOfDays}}</small>
-           <br/>
+        </td>
+        <td class="project-title">
            <small><strong>Reason</strong> : {{leaveReason}}</small>           
        </td>
    </tr>

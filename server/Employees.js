@@ -47,23 +47,6 @@ var employeeSeeds = [
       Emp_Email: 'nitin.tambe@cctech.co.in',
       Image_URL: 'https://lh4.googleusercontent.com/-bWx2NucQh7k/AAAAAAAAAAI/AAAAAAAAABc/BG0lLSCUm5c/s96-c/photo.jpg'
     },
-//   {
-//     "sku" : "your-own-crater",
-//     "name" : "Your Very Own Crater",
-//     "image" : "your-own-crater.jpg",
-//     "summary" : "Buy one for yourself or the one you love! Nothing says 'you're truly special' like a huge hole in the ground",
-//     "description": "The Martian surface is scarred by huge numbers of craters - but we like to think of these gigantic holes as 'scars of love' - so say I love you by buying your very own! Whether it's a personal vanity treat or for that very special someone, a Martian crater shows just how *deep* you really are.",
-//     "price" : 9999900,
-//     "inventory" : 0,
-//     "status" : "published",
-//     "published_at" : new Date(),
-//     "cost" : 45532,
-//     "vendor" : {
-//       "id" : 2,
-//       "slug" : "red-planet",
-//       "name" : "Red Planet Love Machine"
-//     }
-  //}
 ];
 
 if(Employees.find().count() === 0){
