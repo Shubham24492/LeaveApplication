@@ -5,38 +5,25 @@
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
-  <script>
-      $('.datepicker').datepicker({
-    format: 'mm/dd/yyyy',
-    startDate: '-3d'
-});
-$(function(){
-        $('.datepicker input').datepicker({
-           format: "dd.mm.yyyy",
-           todayBtn: "linked",
-           language: "de"
-        });
-    });
-      </script>
+  <script>$('#my-datepicker').datepicker();</script>
 </head>
 <body>
 
     <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Please enter leave details</h2>
+      <form class="form-group">
+        <h2 class="form-group">Please enter leave details</h2>
+        <div class="row">
+                <div class="col-sm-5">
+                    <select name="LeaveType" id="leaveTypeOption" placeholder="Leave Type" class="form-control">
+                                <option value="Casual" selected="">Casual Leave</option>
+                                <option value="Sick" selected="">Sick Leave</option>
+                    </select>
+                </div>
+            </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="input-group">
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select leave type<span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Casual Leave</a></li>
-                    <li><a href="#">Sick Leave</a></li>
-                    </ul>
-                </div><!-- /btn-group -->
-                <input type="text" class="form-control" placeholder="Reason" aria-label="...">
-                </div><!-- /input-group -->
+                <input type="text" class="form-control" id="leaveReason" placeholder="Reason" aria-label="...">
             </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
         <div class="row">
@@ -54,11 +41,7 @@ $(function(){
                 <input type="text" class="form-control" id="noOfDays" value="" placeholder="No of days">
             </div>
         </div>
-        <button class="btn btn-large btn-primary" type="submit">Apply</button>
-
-        <div class="row">
-            <input type="text" class="form-control" id="my-datepicker">
-        </div>
+        <button class="btn btn-large btn-primary" id="applyForLeaveBtn" type="submit">Apply</button>
       </form>
 
     </div>

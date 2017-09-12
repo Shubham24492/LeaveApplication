@@ -1,0 +1,29 @@
+<template name="viewYourLeaves">
+Hi
+<div class="wrapper wrapper-content animated fadeInRight">
+                        <div class="">
+                            <table class="table table-hover" >
+                                <tbody>
+                                    {{#each DBDataList}} {{> leavedetails}} {{/each}}
+                                </tbody>
+                            </table>
+        
+                        </div>
+</div>
+</template>
+
+<template name="leavedetails">
+    <tr>
+       <td class="project-title">
+           <small><strong>Leave Type</strong> : {{leaveType}}</small>
+           <br/>
+           <small><strong>From Date</strong> : {{fromTime}}</small>
+           <br/>
+           <small><strong>To Date</strong> : {{toTime}}</small>
+           <br/>
+           <small><strong>No Of Days</strong> : {{noOfDays}}</small>
+           <br/>
+           <small><strong>Reason</strong> : {{leaveReason}}</small>           
+       </td>
+   </tr>
+</template>

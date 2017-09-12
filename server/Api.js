@@ -42,22 +42,28 @@ Router.route('/leaves',{where: 'server'})
         } 
         else
         {
-            const leave = {
+            console.log(this.request.body.Emp_Name);
+            console.log(this.request.body.Leave_Type);
+            console.log(this.request.body.Reason);
+            console.log(this.request.body.Start_Date);
+            console.log(this.request.body.End_Date);
+            console.log(this.request.body.No_Of_Days);
+
+            var leave = {
                 Emp_Name: this.request.body.Emp_Name,
-                Emp_Email: 'shubham.sarwade@cctech.co.in',
-                Leave_Type: 'Casual',
-                Reason: 'going home',
-                Start_Date: '11/09/2017',
-                End_Date: '11/09/2017',
-                No_Of_Days: 1,
+                Emp_Email: this.request.body.Emp_Email,
+                Leave_Type: this.request.body.Leave_Type,
+                Reason: this.request.body.Reason,
+                Start_Date: this.request.body.Start_Date,
+                End_Date: this.request.body.End_Date,
+                No_Of_Days: this.request.body.No_Of_Days,
             };
             
-            Leaves.schema.validate(leave);
+            console.log(leave);
 
-            Leaves.insert({
-                UserName : this.request.body.userName,
-                UserPassword : this.request.body.userPassword
-            });
+            Leaves.schema.validate(leave);
+            
+            Leaves.insert(leave);
             response = {
                 "error" : false,
                 "message" : "User added."

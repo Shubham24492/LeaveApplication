@@ -43,24 +43,6 @@ var leaveSeeds = [
         End_Date: '11/09/2017',
         No_Of_Days: 1,
     }
-
-//   {
-//     "sku" : "your-own-crater",
-//     "name" : "Your Very Own Crater",
-//     "image" : "your-own-crater.jpg",
-//     "summary" : "Buy one for yourself or the one you love! Nothing says 'you're truly special' like a huge hole in the ground",
-//     "description": "The Martian surface is scarred by huge numbers of craters - but we like to think of these gigantic holes as 'scars of love' - so say I love you by buying your very own! Whether it's a personal vanity treat or for that very special someone, a Martian crater shows just how *deep* you really are.",
-//     "price" : 9999900,
-//     "inventory" : 0,
-//     "status" : "published",
-//     "published_at" : new Date(),
-//     "cost" : 45532,
-//     "vendor" : {
-//       "id" : 2,
-//       "slug" : "red-planet",
-//       "name" : "Red Planet Love Machine"
-//     }
-  //}
 ];
 
 if(Leaves.find().count() === 0){
