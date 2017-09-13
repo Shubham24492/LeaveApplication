@@ -30,3 +30,5 @@ service-configuration
 accounts-google
 google-config-ui
 rajit:bootstrap3-datepicker
+email
+check

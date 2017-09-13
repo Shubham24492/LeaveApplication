@@ -2,11 +2,27 @@ import { Mongo } from 'meteor/mongo';
 import { Meteor } from 'meteor/meteor';
 import { Leaves, Employees } from '../lib/collections';
 
+
+
+
 if(Meteor.isServer) {
    // When Meteor starts, create new collection in Mongo if not exists.
     Meteor.startup(function () {
+        //process.env.MAIL_URL = "smtp://postmaster@sandboxec60c4bdb0c546e1badcb418f925aea0.mailgun.org:password@smtp.mailgun.org:587";
+
+        process.env.MAIL_URL = "smtp://" +
+        encodeURIComponent("postmaster@sandboxec60c4bdb0c546e1badcb418f925aea0.mailgun.org") + ":" +
+        encodeURIComponent("6011ca9ddcae47a156859503275f6e6c") + '@' +
+        encodeURIComponent("smtp.mailgun.org") + ":" + 587;
+
+        		Email.send({ 
+  to: "shubham.sarwade@cctech.co.in",
+  from: "tushar@cctech.co.in",
+  subject: "Example Email",
+  text: "The contents of our email in plain text.",
+});
         //User = new Meteor.Collection('user');
-      Leaves.schema = new SimpleSchema({
+        Leaves.schema = new SimpleSchema({
         Emp_Name: {type: String},
         Emp_Email: {type: String},
         Leave_Type: {type: String},
