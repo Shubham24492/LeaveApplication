@@ -213,6 +213,14 @@ Template.applyForLeave.events({
 
 		});
 
+  // Client: Asynchronously send an email.
+  Meteor.call(
+	  'sendEmail',
+	  'shubham.sarwade@cctech.co.in',
+    'shubham.sarwade@cctech.co.in',
+    'Hello from Meteor!',
+    'This is a test of Email.send.'
+  );
 
 	}
 });
